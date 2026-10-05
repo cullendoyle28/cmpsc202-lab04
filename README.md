@@ -41,25 +41,25 @@ This lab reviews the foundational concepts of algorithms and data structures tha
 
 **Answer**: Stack
 
-**Justification**:
+**Justification**: LIFO (last in first out). The stack would be the best data structure to use because the robot will need to remove the most recent record when completing the maze.
 
 2. A server receives a massive influx of data packets from a streaming video application. To prevent the video from skipping or playing out of order on the user's end, the server must process and forward these packets in the exact sequence they were received.
 
 **Answer**: Queue
 
-**Justification**:
+**Justification**: FIFO (first in first out). The queue would be the best data structure to use because the server must process and forward the packets in the same sequence they were received. Since we want them to go out in the same sequence they came in, a queue would be best. 
 
 3. An atmospheric monitoring system reads temperature data from 10,000 sequentially numbered sensors (IDs 0 through 9999). Throughout the day, the system needs to constantly update and read the current temperature of randomly selected sensors based on their ID number to build localized weather maps.
 
 **Answer**: Array
 
-**Justification**:
+**Justification**: An array is best because the data is sequentially numbered and indexed. An array allows the data is be indexed with the head randomly jumping around.
 
 4. You are building a lightweight syntax checker for a code editor. Its sole job is to scan a document and ensure that every opened parenthesis `(`, bracket `[`, and brace `{` is matched with its corresponding closing character in the correct nested order.
 
 **Answer**: Stack
 
-**Justification**:
+**Justification**: LIFO (last in first out). Since parentheses, brackets, and braces would look like this: `( [ { } ] )`, we want to use the stack where it removes the first found of these characters. Since every one of them needs to be closed, it would scan an open character and then keep checking for the closed character, unless another open character is introduced, where it would then switch to checking for the new open character's closed character.
 
 ## Empirical Comparison of Algorithms
 
