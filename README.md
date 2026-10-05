@@ -10,11 +10,15 @@ This lab reviews the foundational concepts of algorithms and data structures tha
 
 1. Use the rules from lecture 07 to prove that $T(n) = 5 \log n + 7n$ is $\mathcal{O}(n)$.
 
+By the dropping constants property, $T(n) = \log n + n$.
+Then, by the sum is max property, $T(n) = n$.
+So, ${O}(n) = n$.
+
 2. True/False/Possibly: $T(n)$ is $\mathcal{O}(n^2)$?
 
 **Answer**: Yes
 
-**Justification**:
+**Justification**: This is possible because 
 
 3. True/False/Possibly: $T(n)$ is $\Omega(n \log n)$?
 
@@ -109,6 +113,18 @@ for i = 1 to N do
 ```
 
 Write a closed-form expression for the number of times `do_work()` is called in terms of $N$.
+1,2,3,...,n
+2,3,4,...,n
+3,4,5,...,n
+n + n-1 + n-2 + n-3
+
+1,1,1
+1,1
+1
+= 6
+3^2 - 3 = 6
+
+Closed-form expression for the number of times `do_work()` is called: n^2 - n
 
 2. Analyze the exact number of times the `do_work()` function is called in the following pseudocode, assuming $N \ge 1$.
 
