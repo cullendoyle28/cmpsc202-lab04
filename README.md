@@ -124,7 +124,7 @@ n + n-1 + n-2 + n-3
 = 6
 3^2 - 3 = 6
 
-Closed-form expression for the number of times `do_work()` is called: n^2 - n
+Closed-form expression for the number of times `do_work()` is called: n(n+1)/2
 
 2. Analyze the exact number of times the `do_work()` function is called in the following pseudocode, assuming $N \ge 1$.
 
