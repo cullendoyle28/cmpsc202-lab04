@@ -74,18 +74,18 @@ This lab reviews the foundational concepts of algorithms and data structures tha
 
  **Answer**: Cubic time complexity, $\mathcal{O}(n^3)$
 
-**Justification**:
+**Justification**: Since $\mathcal 0.94 / 0.12$ = 7.83, 7.61 / 0.94 = 8.10, and 60.85 / 7.61 = 8.00, we will average the doubling ratio to 8.00. Next, we'll solve $\mathcal \log 2(8)$ which gives us 3. So, this algorithm has $\mathcal{O}(n^3)$ or cubic time complexity.
 
  2. Two students write separate algorithms to compute a metric over an array of 10 million integers. Both algorithms perform exactly one mathematical operation per element, meaning both have a theoretical time complexity of $O(N)$. However, during benchmarking, Algorithm A consistently runs 15x faster than Algorithm B. Why might theoretical Big-O analysis fail to predict this massive performance gap? 
 
-**Answer**:
+**Answer**: Big-O analysis might fail to predict this massive performance gap because of the dropping constants property. Since both algorithms are running at ${O}(N)$ time complexity, Algorithm B could be running at $\mathcal O(15N)$. This would make Algorithm A, if running at ${O}(N)$ time complexity, run 15x faster than Algorithm B.
 
  3. Scenario: To measure the running time of algorithms for an empirical comparison, a developer writes the following benchmarking script:
 
 ```python
 import time
 
-large_array = [i for i in range(1000000)]
+large_array = [i for i in range(1000000)] [1,2,3,4,5,6,7,]
 start = time.time()
 myAlg(large_array)
 end = time.time()
@@ -95,7 +95,7 @@ print("Time:", end - start)
 
 They run this script exactly once for each algorithm on their laptop while streaming a movie in the background. Identify at least three distinct methodological flaws in this benchmarking setup that make the results unreliable.
 
-**Answer**:
+**Answer**: One problem is that they are running this script only once. They should probably run it 5-10 times and take the average of each time collected. Another problem is that they are streaming a movie in the background, which could interfere with experiment because of how their CPU is being distributed. A third problem is that the input list should have random values inside of it, or the length of the list should be random. This is so we can cover more ground, and for real world applications, the data won't be in sequential order. 
 
 ## Pseudocode
 
